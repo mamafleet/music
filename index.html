@@ -12,13 +12,21 @@
     <div class="center">
         <div>
             <div class="song">
-                <h3>12.7.22</h3>
-                <div id="bb"></div>
+                <h3>12.22</h3>
+                <div id="12.22"></div>
             </div>
             <div class="song">
-                <h3>6.22.22</h3>
-                <div id="gd"></div>
+                <h3>8.22</h3>
+                <div id="8.22"></div>
             </div>
+            <div class="song">
+                <h3>2.22</h3>
+                <div id="2.22"></div>
+            </div>
+            <!-- <div class="song">
+                <h3>4.21</h3>
+                <div id="4.21"></div>
+            </div> -->
         </div>
     </div>
 </body>
@@ -28,20 +36,28 @@
 <script src="cplayer.js"></script>
 <script>
     let player = new cplayer({
-        element: document.getElementById('bb'),
+        element: document.getElementById('12.22'),
         playlist: [
             {
-                src: 'Lil K - Gods Plan.mpeg',
-                poster: 'bad.jpg',
+                src: 'music/12.22/Lil K - Gods Plan.mpeg',
+                poster: 'imgs/bad.jpg',
                 name: 'Higher Level',
                 artist: 'Lil K',
                 lyric: '',
                 sublyric: ''
             },
             {
-                src: 'Lil K - Job Security.mpeg',
-                poster: 'bad.jpg',
-                name: 'Job Security',
+                src: 'music/12.22/Lil K - Job Security.mpeg',
+                poster: 'imgs/bad.jpg',
+                name: 'Apple Core Poor',
+                artist: 'Lil K',
+                lyric: '',
+                sublyric: ''
+            },
+            {
+                src: 'music/12.22/Lil K - Menorah.mpeg',
+                poster: 'imgs/bad.jpg',
+                name: 'Menorah',
                 artist: 'Lil K',
                 lyric: '',
                 sublyric: ''
@@ -49,14 +65,69 @@
         ]
     })
     let player2 = new cplayer({
-        element: document.getElementById('gd'),
+        element: document.getElementById('8.22'),
         showPlaylistButton: true,
         playlist: [
-            {
-                src: 'Lil K - Business Blues.mpeg',
-                poster: 'glasses.jpg',
+        {
+                src: 'music/8.22/Lil K - Business Blues.mpeg',
+                poster: 'imgs/glasses.jpg',
                 name: 'Business Blues',
                 artist: 'Lil K',
+                lyric: '',
+                sublyric: ''
+            },
+            {
+                src: 'music/8.22/Lil K - Fed Up.mpeg',
+                poster: 'imgs/glasses.jpg',
+                name: 'Fed Up',
+                artist: 'Lil K',
+                lyric: '',
+                sublyric: ''
+            },
+            {
+                src: 'music/8.22/Lil K - Infinity Cover.mpeg',
+                poster: 'imgs/glasses.jpg',
+                name: 'Infinity Cover',
+                artist: 'Lil K',
+                lyric: '',
+                sublyric: ''
+            },
+            {
+                src: 'music/8.22/Lil K - Walter Schmitty.mpeg',
+                poster: 'imgs/glasses.jpg',
+                name: 'Walter Schmitty',
+                artist: 'Lil K',
+                lyric: '',
+                sublyric: ''
+            },
+        ]
+    })
+
+    let player3 = new cplayer({
+        element: document.getElementById('2.22'),
+        showPlaylistButton: true,
+        playlist: [
+        {
+                src: 'music/2.22 collabs/Lil K Ft. JTC - Break a Law To Save A Life.mpeg',
+                poster: 'imgs/pawn.jpg',
+                name: 'Break A Law To Save A Life',
+                artist: 'Lil K ft. Jewish Tom Cruise',
+                lyric: '',
+                sublyric: ''
+            },
+            {
+                src: 'music/2.22 collabs/Lil K Ft. Big Isis - Citizen of The Kingdom.mpeg',
+                poster: 'imgs/pawn.jpg',
+                name: 'Citizen of The Kingdom',
+                artist: 'Lil K Ft. Big Isis',
+                lyric: '',
+                sublyric: ''
+            },
+            {
+                src: 'music/2.22 collabs/Jewhampton - Chabad Haze.mpeg',
+                poster: 'imgs/pawn.jpg',
+                name: 'Chabad Haze',
+                artist: 'Jewhampton',
                 lyric: '',
                 sublyric: ''
             },
