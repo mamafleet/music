@@ -5,3 +5,11 @@
     display: inline-block;
     margin:5px;
 }
+body{
+    background-color: #222244;
+    color:white;
+}
+
+c-player .cp-drop-down-menu.cp-drop-down-menu-bottom{
+    background-color:#111122;
+}
