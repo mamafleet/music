@@ -38,7 +38,7 @@
     let player = new cplayer({
         element: document.getElementById('12.22'),
         showPlaylistButton: false,
-        showPlaylist:true,
+        showPlaylist: true,
         dark: true,
         big: true,
         playlist: [
@@ -71,11 +71,11 @@
     let player2 = new cplayer({
         element: document.getElementById('8.22'),
         showPlaylistButton: false,
-        showPlaylist:true,
+        showPlaylist: true,
         dark: true,
         big: true,
         playlist: [
-        {
+            {
                 src: 'music/8.22/Lil K - Business Blues.mpeg',
                 poster: 'imgs/glasses.jpg',
                 name: 'Business Blues',
@@ -105,11 +105,11 @@
     let player3 = new cplayer({
         element: document.getElementById('2.22'),
         showPlaylistButton: false,
-        showPlaylist:true,
+        showPlaylist: true,
         dark: true,
         big: true,
         playlist: [
-        {
+            {
                 src: 'music/2.22 collabs/Lil K Ft. JTC - Break a Law To Save A Life.mpeg',
                 poster: 'imgs/pawn.jpg',
                 name: 'Break A Law To Save A Life',
@@ -135,5 +135,49 @@
             },
         ]
     })
+    const players = [player, player2, player3];
+
+    const pauseAllExceptI = function (players, index) {
+        players.map((p, i) => {
+            if (i !== index) {
+                p.pause();
+            }
+        })
+    }
+
+    const pauseOtherPlayersListen = function (players) {
+        players.map((p, i) => {
+            p.on('play', () => pauseAllExceptI(players, i))
+        })
+    }
+
+    const changeAllVolumeExceptI = function (players, index, volume) {
+        console.log("fuck...")
+        players.map((p, i) => {
+            if (i != index) {
+                p.setVolume(volume)
+            }
+        })
+    }
+
+    const syncVolumeListen = function (players) {
+        players.map((p, i) => {
+            p.on('volumechange', () => {
+                if (p.played) {
+                    console.log("hehe")
+                    changeAllVolumeExceptI(players, i, p.volume)
+                }
+            })
+        })
+    }
+
+
+    //makes it so one player is playing at any time.
+    pauseOtherPlayersListen(players);
+    syncVolumeListen(players);
+
+</script>
+
+<script>
 
 </script>
