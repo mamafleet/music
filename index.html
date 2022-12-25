@@ -84,7 +84,7 @@
                 sublyric: ''
             },
             {
-                src: 'music/8.22/Lil K - Infinity Cover.mpeg',
+                src: 'music/8.22/Lil K - Infinity Cover.mp3',
                 poster: 'imgs/glasses.jpg',
                 name: 'Infinity Cover',
                 artist: 'Lil K',
@@ -92,7 +92,7 @@
                 sublyric: ''
             },
             {
-                src: 'music/8.22/Lil K - Walter Schmitty.mpeg',
+                src: 'music/8.22/Lil K - Walter Schmitty.mp3',
                 poster: 'imgs/glasses.jpg',
                 name: 'Walter Schmitty',
                 artist: 'Lil K',
@@ -126,7 +126,7 @@
                 sublyric: ''
             },
             {
-                src: 'music/2.22 collabs/Jewhampton - Chabad Haze.mpeg',
+                src: 'music/2.22 collabs/Jewhampton - Chabad Haze.mp3',
                 poster: 'imgs/pawn.jpg',
                 name: 'Chabad Haze',
                 artist: 'Jewhampton',
@@ -152,7 +152,6 @@
     }
 
     const changeAllVolumeExceptI = function (players, index, volume) {
-        console.log("fuck...")
         players.map((p, i) => {
             if (i != index) {
                 p.setVolume(volume)
@@ -164,7 +163,6 @@
         players.map((p, i) => {
             p.on('volumechange', () => {
                 if (p.played) {
-                    console.log("hehe")
                     changeAllVolumeExceptI(players, i, p.volume)
                 }
             })
