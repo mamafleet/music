@@ -20,8 +20,12 @@
                 <div id="8.22"></div>
             </div>
             <div class="song">
-                <h3>2.22</h3>
-                <div id="2.22"></div>
+                <h3>4.21</h3>
+                <div id="4.21"></div>
+            </div>
+            <div class="song">
+                <h3>1.21</h3>
+                <div id="1.21"></div>
             </div>
             <div class="song">
                 <h3>math-for-kids</h3>
@@ -41,6 +45,7 @@
         showPlaylist: true,
         dark: true,
         big: true,
+        volume:.6
     }
 
     let player = new cplayer({
@@ -105,11 +110,11 @@
     })
 
     let player3 = new cplayer({
-        element: document.getElementById('2.22'),
+        element: document.getElementById('4.21'),
         ...options,
         playlist: [
             {
-                src: 'music/2.22 collabs/Lil K Ft. JTC - Break a Law To Save A Life.mpeg',
+                src: 'music/4.21/Lil K Ft. JTC - Break a Law To Save A Life.mpeg',
                 poster: 'imgs/pawn.jpg',
                 name: 'Break A Law To Save A Life',
                 artist: 'Jewhampton',
@@ -117,7 +122,7 @@
                 sublyric: ''
             },
             {
-                src: 'music/2.22 collabs/Lil K Ft. Big Isis - Citizen of The Kingdom.mpeg',
+                src: 'music/4.21/Lil K Ft. Big Isis - Citizen of The Kingdom.mpeg',
                 poster: 'imgs/pawn.jpg',
                 name: 'Citizen of The Kingdom',
                 artist: 'Lil K Ft. Big Isis',
@@ -125,7 +130,7 @@
                 sublyric: ''
             },
             {
-                src: 'music/2.22 collabs/Jewhampton - Chabad Haze.mp3',
+                src: 'music/4.21/Jewhampton - Chabad Haze.mp3',
                 poster: 'imgs/pawn.jpg',
                 name: 'Chabad Haze',
                 artist: 'Jewhampton',
@@ -136,11 +141,43 @@
     })
 
     let player4 = new cplayer({
+        element: document.getElementById('1.21'),
+        ...options,
+        playlist: [
+            {
+                src: 'music/1.21/rough.mp3',
+                poster: 'imgs/d.jpg',
+                name: 'Rough',
+                artist: 'Lil K',
+                lyric: '',
+                sublyric: ''
+            },
+            {
+                src: 'music/1.21/Lil K - Privacy.mpeg',
+                poster: 'imgs/d.jpg',
+                name: 'Private K',
+                artist: 'Lil K',
+                lyric: '',
+                sublyric: ''
+            },
+            {
+                src: 'music/1.21/Negev Boys - Girls.mp3',
+                poster: 'imgs/d.jpg',
+                name: 'Girls',
+                artist: 'Negev Boys',
+                lyric: '',
+                sublyric: ''
+            },
+        ]
+    })
+
+
+    let player5 = new cplayer({
         element: document.getElementById('math-for-kids'),
         ...options,
         playlist: [
             {
-                src: 'music/math-for-kids/Timothy, Ricky, and the Doohickies.mpeg',
+                src: 'music/math-for-kids/doohicky revised.mp3',
                 poster: 'imgs/willy.jpg',
                 name: 'Timothy and the Doohickies',
                 artist: 'Doctor J',
@@ -167,7 +204,7 @@
     })
 
 
-    const players = [player, player2, player3, player4];
+    const players = [player, player2, player3, player4, player5];
 
     const pauseAllExceptI = function (players, index) {
         players.map((p, i) => {
