@@ -24,10 +24,6 @@ c-player .cp-drop-down-menu.cp-drop-down-menu-bottom {
     fill: greenyellow !important;
 }
 
-.cp-loop-icon path {
-    fill: azure !important;
-}
-
 .cp-controls {
     transition:none !important;
     opacity:1 !important;
