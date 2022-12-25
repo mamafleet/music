@@ -23,10 +23,10 @@
                 <h3>2.22</h3>
                 <div id="2.22"></div>
             </div>
-            <!-- <div class="song">
-                <h3>4.21</h3>
-                <div id="4.21"></div>
-            </div> -->
+            <div class="song">
+                <h3>math-for-kids</h3>
+                <div id="math-for-kids"></div>
+            </div>
         </div>
     </div>
 </body>
@@ -40,7 +40,7 @@
         //showPlaylistButton: false,
         showPlaylist: true,
         dark: true,
-        big: true,  
+        big: true,
     }
 
     let player = new cplayer({
@@ -93,6 +93,14 @@
                 lyric: '',
                 sublyric: ''
             },
+            {
+                src: 'music/8.22/Lil K - Israeli Army Girl.mpeg',
+                poster: 'imgs/glasses.jpg',
+                name: 'Israeli Army Girl',
+                artist: 'Lil K',
+                lyric: '',
+                sublyric: ''
+            },
         ]
     })
 
@@ -126,7 +134,40 @@
             },
         ]
     })
-    const players = [player, player2, player3];
+
+    let player4 = new cplayer({
+        element: document.getElementById('math-for-kids'),
+        ...options,
+        playlist: [
+            {
+                src: 'music/math-for-kids/Timothy, Ricky, and the Doohickies.mpeg',
+                poster: 'imgs/willy.jpg',
+                name: 'Timothy and the Doohickies',
+                artist: 'Doctor J',
+                lyric: '',
+                sublyric: ''
+            },
+            {
+                src: 'music/math-for-kids/Alice and Mao.mpeg',
+                poster: 'imgs/willy.jpg',
+                name: 'Red Brick Road',
+                artist: 'Doctor J',
+                lyric: '',
+                sublyric: ''
+            },
+            {
+                src: 'music/math-for-kids/Megan The Detective.mpeg',
+                poster: 'imgs/willy.jpg',
+                name: 'Meg the Detective',
+                artist: 'Doctor J',
+                lyric: '',
+                sublyric: ''
+            },
+        ]
+    })
+
+
+    const players = [player, player2, player3, player4];
 
     const pauseAllExceptI = function (players, index) {
         players.map((p, i) => {
