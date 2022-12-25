@@ -27,3 +27,24 @@ c-player .cp-drop-down-menu.cp-drop-down-menu-bottom {
 .cp-loop-icon path {
     fill: azure !important;
 }
+
+.cp-controls {
+    transition:none !important;
+    opacity:1 !important;
+}
+
+.cp-lyric {
+    display:none !important;
+}
+
+.cp-play-icon{
+    margin-left:10px !important;
+}
+
+.cp-play-icon.cp-play-icon-paused{
+    margin-left:10px !important;
+}
+
+.cp-play-icon{
+    margin-left:8px !important;
+}
