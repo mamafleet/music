@@ -1,15 +1,29 @@
 .center {
-    margin:10px;
-}
-.song{
-    display: inline-block;
-    margin:5px;
-}
-body{
-    background-color: #222244;
-    color:white;
+    margin: 10px;
 }
 
-c-player .cp-drop-down-menu.cp-drop-down-menu-bottom{
-    background-color:#111122;
+.song {
+    display: inline-block;
+    margin: 5px;
+}
+
+body {
+    background-color: #222244;
+    color: white;
+}
+
+c-player .cp-drop-down-menu.cp-drop-down-menu-bottom {
+    background-color: #111122;
+}
+
+.cp-list-icon path {
+    fill: pink !important;
+}
+
+.cp-volume-icon path {
+    fill: greenyellow !important;
+}
+
+.cp-loop-icon path {
+    fill: azure !important;
 }
