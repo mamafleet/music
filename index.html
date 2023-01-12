@@ -27,8 +27,8 @@
   <div class="center">
     <div>
       <div class="song">
-        <h3>12.22</h3>
-        <div id="12.22"></div>
+        <h3>triple-A-side</h3>
+        <div id="triple-A-side"></div>
       </div>
       <!-- <div class="song">
                 <h3>8.22</h3>
@@ -63,11 +63,11 @@
   };
 
   let player = new cplayer({
-    element: document.getElementById("12.22"),
+    element: document.getElementById("triple-A-side"),
     ...options,
     playlist: [
       {
-        src: "can I follow you down.mpeg",
+        src: "music/triple-A-side/triple A side/can I follow you down.mpeg",
         poster: "imgs/bad.jpg",
         name: "can I follow you down",
         artist: "sam's club",
@@ -75,7 +75,7 @@
         sublyric: "",
       },
       {
-        src: "hey my love.mpeg",
+        src: "music/triple-A-side/triple A side/hey my love.mpeg",
         poster: "imgs/bad.jpg",
         name: "hey my love",
         artist: "sam's club",
@@ -83,7 +83,7 @@
         sublyric: "",
       },
       {
-        src: "bucket's got a hole.mp4",
+        src: "music/triple-A-side/triple A side/bucket's got a hole.mp4",
         poster: "imgs/bad.jpg",
         name: "buckets got a hole",
         artist: "sam's club",
@@ -91,7 +91,7 @@
         sublyric: "",
       },
       {
-        src: "end song.mpeg",
+        src: "music/triple-A-side/triple A side/end song.mpeg",
         poster: "imgs/bad.jpg",
         name: "end song",
         artist: "sam's club",
@@ -225,7 +225,7 @@
   // })
 
   // const players = [player, player2, player3, player4, player5];
-  const players = [player];
+  const players = [player]; 
 
   const pauseAllExceptI = function (players, index) {
     players.map((p, i) => {
