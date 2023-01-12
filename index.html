@@ -1,31 +1,36 @@
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1D9H4NHWKJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-1D9H4NHWKJ"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-        gtag('config', 'G-1D9H4NHWKJ');
-    </script>
+    gtag("config", "G-1D9H4NHWKJ");
+  </script>
 
-    <meta charset="UTF-8" />
-    <title>Lil K's Music</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#f8f8f8" />
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Lil K's Music</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#f8f8f8" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="center">
-        <div>
-            <div class="song">
-                <h3>12.22</h3>
-                <div id="12.22"></div>
-            </div>
-            <div class="song">
+  <div class="center">
+    <div>
+      <div class="song">
+        <h3>12.22</h3>
+        <div id="12.22"></div>
+      </div>
+      <!-- <div class="song">
                 <h3>8.22</h3>
                 <div id="8.22"></div>
             </div>
@@ -40,221 +45,223 @@
             <div class="song">
                 <h3>math-for-kids</h3>
                 <div id="math-for-kids"></div>
-            </div>
-        </div>
+            </div> -->
     </div>
+  </div>
 </body>
 
 <!-- https://cplayer.js.org/ -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/cplayer/dist/cplayer.min.js"></script> -->
 <script src="cplayer.js"></script>
 <script>
+  let options = {
+    //showPlaylistButton: false,
+    showPlaylist: true,
+    dark: true,
+    big: true,
+    volume: 0.6,
+  };
 
-    let options = {
-        //showPlaylistButton: false,
-        showPlaylist: true,
-        dark: true,
-        big: true,
-        volume: .6
-    }
+  let player = new cplayer({
+    element: document.getElementById("12.22"),
+    ...options,
+    playlist: [
+      {
+        src: "music/12.22/Lil K - Gods Plan.mpeg",
+        poster: "imgs/bad.jpg",
+        name: "Higher Level",
+        artist: "Lil K",
+        lyric: "",
+        sublyric: "",
+      },
+      {
+        src: "music/12.22/Lil K - Job Security.mpeg",
+        poster: "imgs/bad.jpg",
+        name: "Apple Core Poor",
+        artist: "Lil K",
+        lyric: "",
+        sublyric: "",
+      },
+      {
+        src: "music/12.22/Lil K - Menorah.mpeg",
+        poster: "imgs/bad.jpg",
+        name: "Menorah",
+        artist: "Lil K",
+        lyric: "",
+        sublyric: "",
+      },
+      {
+        src: "music/12.22/Lil K - Gods Plan.mpeg",
+        poster: "imgs/bad.jpg",
+        name: "Higher Level",
+        artist: "Lil K",
+        lyric: "",
+        sublyric: "",
+      },
+    ],
+  });
+  // let player2 = new cplayer({
+  //     element: document.getElementById('8.22'),
+  //     ...options,
+  //     playlist: [
+  //         {
+  //             src: 'music/8.22/Lil K - Business Blues.mpeg',
+  //             poster: 'imgs/glasses.jpg',
+  //             name: 'Business Blues',
+  //             artist: 'Lil K',
+  //             lyric: '',
+  //             sublyric: ''
+  //         },
+  //         {
+  //             src: 'music/8.22/Lil K - Infinity Cover.mp3',
+  //             poster: 'imgs/glasses.jpg',
+  //             name: 'Infinity Cover',
+  //             artist: 'Lil K',
+  //             lyric: '',
+  //             sublyric: ''
+  //         },
+  //         {
+  //             src: 'music/8.22/Lil K - Israeli Army Girl.mpeg',
+  //             poster: 'imgs/glasses.jpg',
+  //             name: 'Israeli Army Girl',
+  //             artist: 'Lil K',
+  //             lyric: '',
+  //             sublyric: ''
+  //         },
+  //     ]
+  // })
 
-    let player = new cplayer({
-        element: document.getElementById('12.22'),
-        ...options,
-        playlist: [
-            {
-                src: 'music/12.22/Lil K - Gods Plan.mpeg',
-                poster: 'imgs/bad.jpg',
-                name: 'Higher Level',
-                artist: 'Lil K',
-                lyric: '',
-                sublyric: ''
-            },
-            {
-                src: 'music/12.22/Lil K - Job Security.mpeg',
-                poster: 'imgs/bad.jpg',
-                name: 'Apple Core Poor',
-                artist: 'Lil K',
-                lyric: '',
-                sublyric: ''
-            },
-            {
-                src: 'music/12.22/Lil K - Menorah.mpeg',
-                poster: 'imgs/bad.jpg',
-                name: 'Menorah',
-                artist: 'Lil K',
-                lyric: '',
-                sublyric: ''
-            },
-        ]
-    })
-    let player2 = new cplayer({
-        element: document.getElementById('8.22'),
-        ...options,
-        playlist: [
-            {
-                src: 'music/8.22/Lil K - Business Blues.mpeg',
-                poster: 'imgs/glasses.jpg',
-                name: 'Business Blues',
-                artist: 'Lil K',
-                lyric: '',
-                sublyric: ''
-            },
-            {
-                src: 'music/8.22/Lil K - Infinity Cover.mp3',
-                poster: 'imgs/glasses.jpg',
-                name: 'Infinity Cover',
-                artist: 'Lil K',
-                lyric: '',
-                sublyric: ''
-            },
-            {
-                src: 'music/8.22/Lil K - Israeli Army Girl.mpeg',
-                poster: 'imgs/glasses.jpg',
-                name: 'Israeli Army Girl',
-                artist: 'Lil K',
-                lyric: '',
-                sublyric: ''
-            },
-        ]
-    })
+  // let player3 = new cplayer({
+  //     element: document.getElementById('4.21'),
+  //     ...options,
+  //     playlist: [
+  //         {
+  //             src: 'music/4.21/Lil K Ft. JTC - Break a Law To Save A Life.mpeg',
+  //             poster: 'imgs/pawn.jpg',
+  //             name: 'Break A Law To Save A Life',
+  //             artist: 'Jewhampton',
+  //             lyric: '',
+  //             sublyric: ''
+  //         },
+  //         {
+  //             src: 'music/4.21/Lil K Ft. Big Isis - Citizen of The Kingdom.mpeg',
+  //             poster: 'imgs/pawn.jpg',
+  //             name: 'Citizen of The Kingdom',
+  //             artist: 'Lil K Ft. Big Isis',
+  //             lyric: '',
+  //             sublyric: ''
+  //         },
+  //         {
+  //             src: 'music/4.21/Jewhampton - Chabad Haze.mp3',
+  //             poster: 'imgs/pawn.jpg',
+  //             name: 'Chabad Haze',
+  //             artist: 'Jewhampton',
+  //             lyric: '',
+  //             sublyric: ''
+  //         },
+  //     ]
+  // })
 
-    let player3 = new cplayer({
-        element: document.getElementById('4.21'),
-        ...options,
-        playlist: [
-            {
-                src: 'music/4.21/Lil K Ft. JTC - Break a Law To Save A Life.mpeg',
-                poster: 'imgs/pawn.jpg',
-                name: 'Break A Law To Save A Life',
-                artist: 'Jewhampton',
-                lyric: '',
-                sublyric: ''
-            },
-            {
-                src: 'music/4.21/Lil K Ft. Big Isis - Citizen of The Kingdom.mpeg',
-                poster: 'imgs/pawn.jpg',
-                name: 'Citizen of The Kingdom',
-                artist: 'Lil K Ft. Big Isis',
-                lyric: '',
-                sublyric: ''
-            },
-            {
-                src: 'music/4.21/Jewhampton - Chabad Haze.mp3',
-                poster: 'imgs/pawn.jpg',
-                name: 'Chabad Haze',
-                artist: 'Jewhampton',
-                lyric: '',
-                sublyric: ''
-            },
-        ]
-    })
+  // let player4 = new cplayer({
+  //     element: document.getElementById('1.21'),
+  //     ...options,
+  //     playlist: [
+  //         {
+  //             src: 'music/1.21/rough.mp3',
+  //             poster: 'imgs/d.jpg',
+  //             name: 'Rough',
+  //             artist: 'Lil K',
+  //             lyric: '',
+  //             sublyric: ''
+  //         },
+  //         {
+  //             src: 'music/1.21/Lil K - Privacy.mpeg',
+  //             poster: 'imgs/d.jpg',
+  //             name: 'Private K',
+  //             artist: 'Lil K',
+  //             lyric: '',
+  //             sublyric: ''
+  //         },
+  //         {
+  //             src: 'music/1.21/Negev Boys - Girls.mp3',
+  //             poster: 'imgs/d.jpg',
+  //             name: 'Girls',
+  //             artist: 'Negev Boys',
+  //             lyric: '',
+  //             sublyric: ''
+  //         },
+  //     ]
+  // })
 
-    let player4 = new cplayer({
-        element: document.getElementById('1.21'),
-        ...options,
-        playlist: [
-            {
-                src: 'music/1.21/rough.mp3',
-                poster: 'imgs/d.jpg',
-                name: 'Rough',
-                artist: 'Lil K',
-                lyric: '',
-                sublyric: ''
-            },
-            {
-                src: 'music/1.21/Lil K - Privacy.mpeg',
-                poster: 'imgs/d.jpg',
-                name: 'Private K',
-                artist: 'Lil K',
-                lyric: '',
-                sublyric: ''
-            },
-            {
-                src: 'music/1.21/Negev Boys - Girls.mp3',
-                poster: 'imgs/d.jpg',
-                name: 'Girls',
-                artist: 'Negev Boys',
-                lyric: '',
-                sublyric: ''
-            },
-        ]
-    })
+  // let player5 = new cplayer({
+  //     element: document.getElementById('math-for-kids'),
+  //     ...options,
+  //     playlist: [
+  //         {
+  //             src: 'music/math-for-kids/doohicky revised.mp3',
+  //             poster: 'imgs/willy.jpg',
+  //             name: 'Timothy and the Doohickies',
+  //             artist: 'Doctor J',
+  //             lyric: '',
+  //             sublyric: ''
+  //         },
+  //         {
+  //             src: 'music/math-for-kids/Alice and Mao.mpeg',
+  //             poster: 'imgs/willy.jpg',
+  //             name: 'Red Brick Road',
+  //             artist: 'Doctor J',
+  //             lyric: '',
+  //             sublyric: ''
+  //         },
+  //         {
+  //             src: 'music/math-for-kids/Megan The Detective.mpeg',
+  //             poster: 'imgs/willy.jpg',
+  //             name: 'Meg the Detective',
+  //             artist: 'Doctor J',
+  //             lyric: '',
+  //             sublyric: ''
+  //         },
+  //     ]
+  // })
 
+  // const players = [player, player2, player3, player4, player5];
+  const players = [player];
 
-    let player5 = new cplayer({
-        element: document.getElementById('math-for-kids'),
-        ...options,
-        playlist: [
-            {
-                src: 'music/math-for-kids/doohicky revised.mp3',
-                poster: 'imgs/willy.jpg',
-                name: 'Timothy and the Doohickies',
-                artist: 'Doctor J',
-                lyric: '',
-                sublyric: ''
-            },
-            {
-                src: 'music/math-for-kids/Alice and Mao.mpeg',
-                poster: 'imgs/willy.jpg',
-                name: 'Red Brick Road',
-                artist: 'Doctor J',
-                lyric: '',
-                sublyric: ''
-            },
-            {
-                src: 'music/math-for-kids/Megan The Detective.mpeg',
-                poster: 'imgs/willy.jpg',
-                name: 'Meg the Detective',
-                artist: 'Doctor J',
-                lyric: '',
-                sublyric: ''
-            },
-        ]
-    })
+  const pauseAllExceptI = function (players, index) {
+    players.map((p, i) => {
+      if (i !== index) {
+        p.pause();
+      }
+    });
+  };
 
+  const pauseOtherPlayersListen = function (players) {
+    players.map((p, i) => {
+      p.on("play", () => pauseAllExceptI(players, i));
+    });
+  };
 
-    const players = [player, player2, player3, player4, player5];
+  const changeAllVolumeExceptI = function (players, index, volume) {
+    players.map((p, i) => {
+      if (i != index) {
+        p.setVolume(volume);
+      }
+    });
+  };
 
-    const pauseAllExceptI = function (players, index) {
-        players.map((p, i) => {
-            if (i !== index) {
-                p.pause();
-            }
-        })
-    }
+  const syncVolumeListen = function (players) {
+    players.map((p, i) => {
+      p.on("volumechange", () => {
+        if (p.played) {
+          changeAllVolumeExceptI(players, i, p.volume);
+        }
+      });
+    });
+  };
 
-    const pauseOtherPlayersListen = function (players) {
-        players.map((p, i) => {
-            p.on('play', () => pauseAllExceptI(players, i))
-        })
-    }
-
-    const changeAllVolumeExceptI = function (players, index, volume) {
-        players.map((p, i) => {
-            if (i != index) {
-                p.setVolume(volume)
-            }
-        })
-    }
-
-    const syncVolumeListen = function (players) {
-        players.map((p, i) => {
-            p.on('volumechange', () => {
-                if (p.played) {
-                    changeAllVolumeExceptI(players, i, p.volume)
-                }
-            })
-        })
-    }
-
-
-    //makes it so one player is playing at any time.
-    pauseOtherPlayersListen(players);
-    syncVolumeListen(players);
-
+  //makes it so one player is playing at any time.
+  pauseOtherPlayersListen(players);
+  syncVolumeListen(players);
 </script>
 
-<script>
-
-</script>
+<script></script>
