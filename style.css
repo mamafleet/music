@@ -8,8 +8,8 @@
 }
 
 body {
-    background-color: #222244;
-    color: white;
+    background-image: "imgs/collage.jpg";
+    background-color: rgb(252, 214, 221);
 }
 
 c-player .cp-drop-down-menu.cp-drop-down-menu-bottom {
